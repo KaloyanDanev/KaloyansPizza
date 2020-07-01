@@ -5,7 +5,7 @@ import styles from './Cards.css';
 function Cards() {
     return (
         <div>
-               Cards
+
         </div>
     );
 }

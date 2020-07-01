@@ -1,25 +1,166 @@
-body{
-    background-color: rgb(250, 250, 250);
+
+* {
+    box-sizing: border-box;
 }
 
-.container {
+
+body {
+    background-color: #fff;
+}
+
+#main-navbar {
+    transition: .8s;
+}
+
+h2 {
+    color: #3D464F;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h3 {
+    color: #D72323;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.text-danger {
+    color: #D72323 !important;
+}
+
+.text-shadow {
+    text-shadow: 3px 3px 30px rgba(0, 0, 0, .6);
+}
+
+.btn {
+    box-shadow: none;
+    border-radius: 100px;
+}
+
+
+.btn-CTA {
+    background-color: #D72323;
+    color: white;
+}
+
+.btn-CTA:hover {
+    color: rgb(225, 225, 225);
+}
+
+#home-landing {
+    height: 100vh;
+    background: url('images/background.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.brand-logo {
+    width: 80px;
+    height: auto;
+}
+
+.navbar-brand img {
+    margin: 0;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.jumbotron-center-main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.image {
-    width: 370px;
-    margin-top: 50px;
+.card-img-top {
+    width: 100%;
+    height: 300px;
 }
 
-@media (max-width: 770px) {
-    .container {
-        margin: 0 10%;
+#how-it-works {
+    background-color: white;
+}
+
+#customer-favorites,
+#menu {
+    min-height: 1040px;
+    background-color: #D72323;
+    clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 calc(100% - 5vw)
+    );
+}
+
+footer {
+    background-color: #17202A;
+}
+
+.copy-text {
+    font-size: .8em;
+}
+
+.grid-price {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.menu-card {
+    min-height: 36em;
+}
+
+#menu-loader {
+    height: 200px;
+}
+
+.menu-grid-container {
+    display: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .card-testimonital {
+        min-height: 38em;
     }
 
-    .image {
+    .card-img-top {
         width: 100%;
+        height: 240px;
     }
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar {
+        height: 100px;
+    }
+
+    .navbar-brand img {
+        margin: 0;
+        padding: 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 180px;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }

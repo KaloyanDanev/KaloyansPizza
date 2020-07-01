@@ -1,17 +1,19 @@
 import React from 'react';
 
 import styles from './App.css';
-import { Home, Navbar, Cards } from "./components";
+import { Home } from './pages';
+import { Navbar, Cards, Favourites } from "./components";
 
 class App extends React.Component {
 
     render() {
         return (
-                <div className={styles.container}>
+                <>
                 <Navbar/>
                 <Home/>
+                <Favourites/>
                 <Cards/>
-            </div>
+            </>
         );
     }
 }
