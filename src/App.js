@@ -1,8 +1,7 @@
 import React from 'react';
 
 import styles from './App.css';
-import { Home } from './pages';
-import { Navbar, Footer, Cards, Favorite } from "./components";
+import { Navbar, Footer, Home, Cards, Favorite } from "./components";
 
 class App extends React.Component {
 
