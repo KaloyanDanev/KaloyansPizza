@@ -2,12 +2,13 @@ import React from 'react';
 
 import styles from './Cards.css';
 
-function Cards() {
+class Cards extends React.Component {
+    render(){
     return (
         <div>
-
         </div>
     );
+  }
 }
 
 export default Cards;
