@@ -50,7 +50,7 @@ class Favorite extends React.Component {
                         <h2 className="text-white">Customer Favorites</h2>
                         <p className="text-light lead">Based on ratings</p>
 
-                        <div className="row">
+                        <div className="row" id="favorite">
                             {favorite.map(item => (
                                 <div className="col-12 col-md-6 col-lg-4 col-xl-3 mt-3 px-2">
                                     <div className="card card-testimonital my-2 shadow-none">
@@ -62,8 +62,8 @@ class Favorite extends React.Component {
                                                 className="material-icons">format_quote</i>{item.comment}</p>
                                             <span className="text-success">Reviewed by</span>
                                             <span className="chip">
-                                <img alt="Chip Image" className="chip-img" src={item.img}/>
-                                                {item.name}
+                                <img alt="Chip" className="chip-img" src={item.img}/>
+                                {item.name}
                                 </span>
                                         </div>
                                         <div className="card-footer">

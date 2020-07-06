@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './Home.css'
+import Favorite from "../../components/Favorite/Favorite"
 
 import discover from '../../images/icons/discover.png';
 import choose from '../../images/icons/choose.png';
@@ -10,8 +10,8 @@ import pay from '../../images/icons/pay.png';
 class Home extends React.Component {
     render() {
         return (
-            <div className="margin">
-                <section className="container-fluid py-5" id="how-it-works">
+            <>
+                <section className="container-fluid py-5 marginHome" id="how-it-works">
                     <div className="container text-center">
                         <h2>Skip The Drive!</h2>
                         <p className="lead">Get Great Pizza In 4 Simple Steps</p>
@@ -43,8 +43,9 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-            </div>
-        );
+                <Favorite/>
+            </>
+    );
     }
 }
 
