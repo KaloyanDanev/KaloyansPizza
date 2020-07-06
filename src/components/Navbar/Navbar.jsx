@@ -13,8 +13,8 @@ class Navbar extends React.Component {
                         </Link>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
-                                <a className="nav-item nav-link font-weight-bold active" href="#how-it-works">HOW IT WORKS</a>
-                                <Link to="/menu" className="nav-item nav-link font-weight-bold active">MENU</Link>
+                                <a className="nav-item nav-link font-weight-bold active" href="/#how-it-works">HOW IT WORKS</a>
+                                <a href="/menu" className="nav-item nav-link font-weight-bold active">MENU</a>
                             </div>
                         </div>
                         <a className="btn btn-lg orderBtn" href="order.html" role="button">Start Order</a>
