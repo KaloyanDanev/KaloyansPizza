@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Favorite from "../../components/Favorite/Favorite"
+import Favorite from "../Favorite/Favorite"
 
 import discover from '../../images/icons/discover.png';
 import choose from '../../images/icons/choose.png';
@@ -19,6 +19,7 @@ class Home extends React.Component {
                         <p className="lead font-weight-bold text-shadow">No signups, no logins, Just Great Pizza!</p>
                     </div>
                 </div>
+
                 </div>
                 <section className="container-fluid py-5 marginHome" id="how-it-works">
                     <div className="container text-center">
@@ -29,7 +30,7 @@ class Home extends React.Component {
                             <div className="col-6 col-md-3 pt-5">
                                 <img src={discover} alt=""/>
                                 <h3 className="value-step">Discover</h3>
-                                <p className="text-muted">Find a John's Pizza near you</p>
+                                <p className="text-muted">Find  Kaloyan's Pizza near you</p>
                             </div>
 
                             <div className="col-6 col-md-3 pt-5">
@@ -47,11 +48,12 @@ class Home extends React.Component {
                             <div className="col-6 col-md-3 pt-5">
                                 <img src={deliver} alt=""/>
                                 <h3 className="value-step">Delivery</h3>
-                                <p className="text-muted">Get your food ASAP</p>
+                                <p className="text-muted">Get your food</p>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 <Favorite/>
 
             </>

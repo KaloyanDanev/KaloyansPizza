@@ -1,5 +1,4 @@
-{
-  "favoritePizza": [
+[
     {
     "product":"Garden Pizza",
       "photo": "garden.jpg",
@@ -20,15 +19,12 @@
       "name": "Victor",
       "comment": "Visiting from out of town and a friend suggested Kaloyan's Pizza. She was spot on...so good.",
       "img": "victor.jpg"
-    }
-  ],
-  "favoriteDessert": [
+    },
     {
-      "product":"Chocolate Chip Brownie",
-      "photo": "chocolate-chip-brownie.jpg",
+      "product":"Chicken Pizza",
+      "photo": "chicken.jpg",
       "name": "Rikki",
       "comment": "I think I'm in love! It's just so good! Melts in your mouth and leaves you wanting more.",
-      "img": "rikki.jpg"
+      "img": "../images/customers/rikki.jpg"
     }
-  ]
-}
+]
