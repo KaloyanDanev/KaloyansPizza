@@ -1,7 +1,7 @@
 {
   "pizza": [
     {
-      "name": "Cheese",
+      "name": "Cheese Pizza",
       "photo": "cheese.jpg",
       "description": "Real cheese made from mozzarella, pizza sauce and buttery garlic crust.",
       "serving_size": "1 slice, 8 slices",
@@ -9,7 +9,7 @@
       "price": 10
     },
     {
-      "name": "Pepperoni",
+      "name": "Pepperoni Pizza",
       "photo": "pepperoni.jpg",
       "description": "Premium pepperoni, real cheese made from mozzarella and buttery garlic crust.",
       "serving_size": "1 slice, 8 slices",
@@ -17,7 +17,7 @@
       "price": 10
     },
     {
-      "name": "Sausage",
+      "name": "Sausage Pizza",
       "photo": "sausage.jpg",
       "description": "Sausage and real cheese made from mozzarella and buttery garlic crust.",
       "serving_size": "1 slice, 8 slices",
@@ -25,7 +25,7 @@
       "price": 10
     },
     {
-      "name": "Chicken",
+      "name": "Chicken Pizza",
       "photo": "chicken.jpg",
       "description": "Premium all-white chicken and real cheese made with mozzarella and buttery garlic crust.",
       "serving_size": "1 slice, 8 slices",
@@ -33,7 +33,7 @@
       "price": 10
     },
     {
-      "name": "Garden",
+      "name": "Garden Pizza",
       "photo": "garden.jpg",
       "description": "Mushrooms, black olives, onions, sliced tomatoes, pizza sauce and signature three-cheese blend.",
       "serving_size": "1 slice, 8 slices",
@@ -287,5 +287,4 @@
       "price": 6.99
     }
   ]
-
 }

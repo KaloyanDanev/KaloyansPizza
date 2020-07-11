@@ -16,7 +16,7 @@ class Pizzas extends React.Component {
                                 <p className="card-text text-left">{data.description}</p>
                                 <p className="text-success text-left">
                                     <em>{data.calorie_per_serving} calories</em></p>
-                                <p className="grid-price">£{data.price}</p>
+                                <p className="grid-price">£ {data.price}</p>
                             </div>
                             <div className="card-footer">
                             <a href={"/menu"} className="btn btn-block shadow-sm btn-lg btn-CTA" role="button">Add <i className="fa fa-shopping-cart"/></a>
