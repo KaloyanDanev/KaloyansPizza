@@ -26,6 +26,7 @@ class Menu extends React.Component {
 
                     </div>
                 </section>
+
             </>
         );
     }

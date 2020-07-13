@@ -1,33 +1,51 @@
 import React from 'react';
 
-import data from "../../../data/menu.json"
+import {addToCart} from "../../actions/cartActions";
+import {connect} from "react-redux";
 
 class Pizzas extends React.Component {
+    handleClick = (id)=>{
+        this.props.addToCart(id);
+    }
+
     render() {
-        return (
-            <div className="row pizza-grid">{data.pizza.map((data,key) => {
-                return (
-                    <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={key}>
-                        <div className="card menu-card my-2 shadow-none">
-                            <img className="card-img-top" src={require(`../../../images/menu/pizza/`+ data.photo)}
-                                 alt={data.name}/>
-                            <div className="card-body">
-                                <h5 className="card-title text-left font-weight-bold">{data.name}</h5>
-                                <p className="card-text text-left">{data.description}</p>
-                                <p className="text-success text-left">
-                                    <em>{data.calorie_per_serving} calories</em></p>
-                                <p className="grid-price">£ {data.price}</p>
-                            </div>
-                            <div className="card-footer">
-                            <a href={"/menu"} className="btn btn-block shadow-sm btn-lg btn-CTA" role="button">Add <i className="fa fa-shopping-cart"/></a>
-                            </div>
+        let itemList = this.props.pizzas.map(item=>{
+            return(
+                <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={item.name}>
+                    <div className="card menu-card my-2 shadow-none">
+                        <img className="card-img-top" src={item.photo} alt={item.name} />
+                        <div className="card-body">
+                            <h5 className="card-title text-left font-weight-bold">{item.name}</h5>
+                            <p className="card-text text-left">{item.description}</p>
+                            <p className="text-success text-left">
+                                <em>{item.calorie_per_serving} calories</em></p>
+                            <p className="grid-price">£ {item.price}</p>
+                        </div>
+                        <div className="card-footer">
+                            <button to="/" className="btn btn-block shadow-sm btn-lg btn-CTA" onClick={()=>{this.handleClick(item.id)}}>Add <i className="fa fa-shopping-cart"/></button>
                         </div>
                     </div>
-                )
-            })}
+                </div>
+            )
+        })
+        return (
+            <div className="row pizza-grid">
+                {itemList}
             </div>
-        );
+        )
     }
 }
 
-export default Pizzas;
+const mapStateToProps = (state)=>{
+    return {
+        pizzas: state.pizzas
+    }
+}
+const mapDispatchToProps= (dispatch)=>{
+
+    return{
+        addToCart: (id)=>{dispatch(addToCart(id))}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Pizzas);

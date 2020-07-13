@@ -7,20 +7,25 @@ import choose from '../../images/icons/choose.png';
 import deliver from '../../images/icons/deliver.png';
 import pay from '../../images/icons/pay.png';
 
+
 class Home extends React.Component {
-    render() {
+
+    handleClick = (id)=>{
+        this.props.addToCart(id);
+    }
+
+    render(){
         return (
             <>
                 <div className="jumbotron jumbotron-fluid shadow-none" id="home-landing">
-
                 <div className="container jumbotron-center-main">
                     <div className="text-center text-white">
                         <h1 className="display-2 font-weight-bold text-shadow">Any Pizza, Free Delivery, Starts at £10</h1>
                         <p className="lead font-weight-bold text-shadow">No signups, no logins, Just Great Pizza!</p>
                     </div>
                 </div>
-
                 </div>
+
                 <section className="container-fluid py-5 marginHome" id="how-it-works">
                     <div className="container text-center">
                         <h2>Skip The Drive!</h2>
@@ -53,11 +58,9 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-
-                <Favorite/>
-
+             <Favorite/>
             </>
-    );
+    )
     }
 }
 
