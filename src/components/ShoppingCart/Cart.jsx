@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { removeItem,addQuantity,subtractQuantity} from '../actions/cartActions'
 import Recipe from './Recipe'
-import 'materialize-css';
 
 class Cart extends Component{
 
