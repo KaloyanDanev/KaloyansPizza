@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { removeItem,addQuantity,subtractQuantity} from '../actions/cartActions'
 import Recipe from './Recipe'
 import 'materialize-css';
-import { Button, Card, Row, Col } from 'react-materialize';
 
 class Cart extends Component{
 
