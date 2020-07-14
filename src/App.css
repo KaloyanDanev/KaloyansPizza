@@ -2,8 +2,7 @@
     box-sizing: border-box;
 }
 body{
-   background-color:rgba(0,0,0,.87);
-
+   background-color:rgba(0,0,0,.87) !important;
 }
 
 #main-navbar {
@@ -67,15 +66,15 @@ h3 {
 }
 
 .brand-logo {
-    width: 80px;
+    width: 100px;
     height: auto;
 }
 
 .navbar-brand img {
     margin: 0;
     padding: 10px;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 
 .jumbotron-center-main {
