@@ -10,8 +10,7 @@ class Desserts extends React.Component {
     }
 
     render() {
-        let itemList = this.props.items.map(item=>{
-            if (item.category === "dessert")
+        let itemList = this.props.items.filter(x=> x.category ==="dessert").map(item=> {
                 return(
                     <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={item.id}>
                         <div className="card menu-card my-2 shadow-none">
