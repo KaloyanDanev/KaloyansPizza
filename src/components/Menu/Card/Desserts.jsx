@@ -1,34 +1,58 @@
 import React from 'react';
 
-import data from "../../../data/menu.json"
+import {addToCart} from "../../actions/cartActions";
+import {connect} from "react-redux";
 
 class Desserts extends React.Component {
+
+    handleClick = (id)=>{
+        this.props.addToCart(id);
+    }
+
     render() {
-        return (
-            <div className="row desserts-grid">{data.desserts.map((data,key) => {
-                return (
-                    <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={key}>
+        let itemList = this.props.items.map(item=>{
+            if (item.category === "dessert")
+                return(
+                    <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={item.id}>
                         <div className="card menu-card my-2 shadow-none">
-                            <img className="card-img-top" src={require(`../../../images/menu/desserts/`+ data.photo)}
-                                 alt={data.name}/>
-                                <div className="card-body">
-                                    <h5 className="card-title text-left font-weight-bold">{data.name}</h5>
-                                    <p className="card-text text-left">{data.description}</p>
-                                    <p className="text-success text-left">
-                                        <em>{data.calorie_per_serving} calories</em>
-                                    </p>
-                                    <p className="grid-price">£ {data.price}</p>
-                                </div>
-                            <div className="card-footer">
-                                <a href={"/menu"} className="btn btn-block shadow-sm btn-lg btn-CTA" role="button">Add <i className="fa fa-shopping-cart"/></a>
+                            <img className="card-img-top" src={item.photo}
+                                 alt={item.name}/>
+                            <div className="card-body">
+                                <h5 className="card-title text-left font-weight-bold">{item.name}</h5>
+                                <p className="card-text text-left">{item.description}</p>
+                                <p className="text-success text-left">
+                                    <em>{item.calorie_per_serving} calories</em>
+                                </p>
+                                <p className="grid-price">£ {item.price}</p>
                             </div>
+                            <div className="card-footer">
+                            <button to="/" className="btn orderBtn btn-block shadow-sm btn-lg btn-CTA" onClick={()=>{this.handleClick(item.id)}}>Add <i className="fa fa-shopping-cart"/></button>
+                        </div>
                         </div>
                     </div>
                 )
-            })}
+        })
+        return (
+            <div className="row desserts-grid">
+                {itemList}
             </div>
-        );
+        )
     }
 }
 
-export default Desserts;
+const mapStateToProps = (state)=>{
+    return {
+        items: state.items
+    }
+}
+const mapDispatchToProps= (dispatch)=>{
+
+    return{
+        addToCart: (id)=>{dispatch(addToCart(id))}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Desserts);
+
+
+

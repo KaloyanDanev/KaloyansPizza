@@ -4,12 +4,14 @@ import {addToCart} from "../../actions/cartActions";
 import {connect} from "react-redux";
 
 class Pizzas extends React.Component {
+
     handleClick = (id)=>{
         this.props.addToCart(id);
     }
 
     render() {
-        let itemList = this.props.pizzas.map(item=>{
+        let itemList = this.props.items.map(item=>{
+            if (item.category === "pizza")
             return(
                 <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={item.name}>
                     <div className="card menu-card my-2 shadow-none">
@@ -22,7 +24,7 @@ class Pizzas extends React.Component {
                             <p className="grid-price">£ {item.price}</p>
                         </div>
                         <div className="card-footer">
-                            <button to="/" className="btn btn-block shadow-sm btn-lg btn-CTA" onClick={()=>{this.handleClick(item.id)}}>Add <i className="fa fa-shopping-cart"/></button>
+                            <button to="/" className="btn btn-block orderBtn shadow-sm btn-lg btn-CTA" onClick={()=>{this.handleClick(item.id)}}>Add <i className="fa fa-shopping-cart"/></button>
                         </div>
                     </div>
                 </div>
@@ -38,7 +40,7 @@ class Pizzas extends React.Component {
 
 const mapStateToProps = (state)=>{
     return {
-        pizzas: state.pizzas
+        items: state.items
     }
 }
 const mapDispatchToProps= (dispatch)=>{

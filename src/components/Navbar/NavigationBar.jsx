@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../../images/brand/logo_transparent.png'
 import { Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 
 class NavigationBar extends React.Component {
