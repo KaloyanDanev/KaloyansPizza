@@ -35,6 +35,7 @@ class Toppings extends React.Component {
                 {itemList}
             </div>
         )
+
     }
 }
 
