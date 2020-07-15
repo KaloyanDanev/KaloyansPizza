@@ -20,9 +20,9 @@ class Cart extends Component{
     }
 
     render(){
-        let addedItems = this.props.pizzas.length ?
+        let addedItems = this.props.items.length ?
             (
-             <div className="row desserts-grid">{this.props.pizzas.map(item=>{
+             <div className="row desserts-grid">{this.props.items.map(item=>{
                     return(
                         <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" >
                         <div className="card menu-card my-2 shadow-none" key={item.name}>
@@ -70,7 +70,7 @@ class Cart extends Component{
 
 const mapStateToProps = (state)=>{
     return{
-        pizzas: state.addedItems
+        items: state.addedItems
     }
 }
 const mapDispatchToProps = (dispatch)=>{
