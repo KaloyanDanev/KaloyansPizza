@@ -44,7 +44,7 @@ class Cart extends Component{
                                 <Link to="cart"><i className="fa fa-plus fa-2x fa-cog" aria-hidden="true" onClick={()=>{this.handleAddQuantity(item.id)}}/></Link>
                                 <Link to="cart"><i className="fa fa-minus fa-2x fa-cog" onClick={()=>{this.handleSubtractQuantity(item.id)}}/></Link>
                             </div>
-                            <button className="btn-CTA btn active orderBtn" onClick={()=>{this.handleRemove(item.id);{notify()}}}>Remove</button>
+                            <button className="btn-CTA btn active orderBtn" onClick={()=>{this.handleRemove(item.id);notify()}}>Remove</button>
                             <ToastContainer/>
                         </div>
                         </div>

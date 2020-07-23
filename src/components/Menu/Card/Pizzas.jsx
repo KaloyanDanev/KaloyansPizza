@@ -27,7 +27,7 @@ class Pizzas extends React.Component {
                             <p className="grid-price">£ {item.price}</p>
                         </div>
                         <div className="card-footer">
-                            <button className="btn btn-block orderBtn shadow-sm btn-lg btn-CTA" onClick={()=>{this.handleClick(item.id);{notify()}}}>Add <i className="fa fa-shopping-cart"/></button>
+                            <button className="btn btn-block orderBtn shadow-sm btn-lg btn-CTA" onClick={()=>{this.handleClick(item.id);notify()}}>Add <i className="fa fa-shopping-cart"/></button>
                             <ToastContainer/>
                         </div>
                     </div>
