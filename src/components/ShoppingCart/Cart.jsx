@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { removeItem,addQuantity,subtractQuantity} from '../actions/cartActions'
 import Recipe from './Recipe'
+import { ToastContainer, toast } from 'react-toastify';
 
 class Cart extends Component{
 
@@ -23,9 +24,10 @@ class Cart extends Component{
         let addedItems = this.props.items.length ?
             (
              <div className="row desserts-grid">{this.props.items.map(item=>{
-                    return(
-                        <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" >
-                        <div className="card menu-card my-2 shadow-none" key={item.name}>
+                 const notify = () => toast.error(`${item.name} Removed`);
+                 return(
+                        <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={item.name} >
+                        <div className="card menu-card my-2 shadow-none">
                                 <img className="card-img-top" src={item.photo} alt={item.name} />
                                 <div className="card-body">
                                     <h5 className="card-title text-left font-weight-bold">{item.name}</h5>
@@ -42,7 +44,8 @@ class Cart extends Component{
                                 <Link to="cart"><i className="fa fa-plus fa-2x fa-cog" aria-hidden="true" onClick={()=>{this.handleAddQuantity(item.id)}}/></Link>
                                 <Link to="cart"><i className="fa fa-minus fa-2x fa-cog" onClick={()=>{this.handleSubtractQuantity(item.id)}}/></Link>
                             </div>
-                            <button className="btn-CTA btn active orderBtn" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
+                            <button className="btn-CTA btn active orderBtn" onClick={()=>{this.handleRemove(item.id);{notify()}}}>Remove</button>
+                            <ToastContainer/>
                         </div>
                         </div>
                     )

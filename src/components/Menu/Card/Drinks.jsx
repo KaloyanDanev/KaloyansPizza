@@ -2,6 +2,7 @@ import React from 'react';
 
 import {addToCart} from "../../actions/cartActions";
 import {connect} from "react-redux";
+import { toast } from 'react-toastify';
 
 class Drinks extends React.Component {
 
@@ -11,7 +12,8 @@ class Drinks extends React.Component {
 
     render() {
         let itemList = this.props.items.filter(x=> x.category ==="drink").map(item=> {
-                return(
+            const notify = () => toast.success(`${item.name} Added`);
+            return(
                     <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={item.id}>
                         <div className="card menu-card my-2 shadow-none">
                             <img className="card-img-top" src={item.photo}
@@ -23,7 +25,7 @@ class Drinks extends React.Component {
                                 <p className="grid-price">£ {item.price}</p>
                             </div>
                             <div className="card-footer">
-                                <button to="/" className="btn orderBtn btn-block shadow-sm btn-lg btn-CTA" onClick={()=>{this.handleClick(item.id)}}>Add <i className="fa fa-shopping-cart"/></button>
+                                <button className="btn btn-block orderBtn shadow-sm btn-lg btn-CTA" onClick={()=>{this.handleClick(item.id);{notify()}}}>Add <i className="fa fa-shopping-cart"/></button>
                             </div>
                         </div>
                     </div>
