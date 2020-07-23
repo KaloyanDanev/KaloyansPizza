@@ -20,8 +20,8 @@ class Recipe extends Component{
 
         return(
             <div className="container row">
-                <div className="collection card col-12 col-md-6 col-lg-4 col-xl-3 px-2 card-body test">
-                        <label>
+                <div className="collection card col-lg-3 col-sm-12 col-md-6 px-2 card-body test">
+                    <label>
                             <input type="checkbox" ref="shipping" onChange= {this.handleChecked} />
                             <span>Shipping(+ £6)</span>
                         </label>

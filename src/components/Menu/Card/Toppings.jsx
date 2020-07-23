@@ -14,7 +14,7 @@ class Toppings extends React.Component {
         let itemList = this.props.items.filter(x=> x.category ==="topping").map(item=> {
             const notify = () => toast.success(`${item.name} Added`);
             return(
-                <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={item.id}>
+                <div className="col-lg-3 col-sm-12 col-md-6 px-2" key={item.id}>
                 <div className="card menu-card my-2 shadow-none">
                     <img className="card-img-top" src={item.photo}
                          alt={item.name}/>

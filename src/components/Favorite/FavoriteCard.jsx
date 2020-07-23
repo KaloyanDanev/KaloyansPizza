@@ -7,7 +7,7 @@ class FavoriteCard extends React.Component {
         return (
             <div className="row favorite-grid">{favoriteData.map((data,key) => {
                 return (
-                    <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={key}>
+                    <div className="col-lg-3 col-sm-12 col-md-6 px-2" key={key}>
                     <div className="card menu-card my-2 shadow-none">
                         <img className="card-img-top" src={require(`../../images/menu/pizza/`+ data.photo)} alt={data.product} />
                         <div className="card-body">

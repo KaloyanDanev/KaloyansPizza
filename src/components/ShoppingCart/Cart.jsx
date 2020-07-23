@@ -26,7 +26,7 @@ class Cart extends Component{
              <div className="row desserts-grid">{this.props.items.map(item=>{
                  const notify = () => toast.error(`${item.name} Removed`);
                  return(
-                        <div className="col-12 col-md-6 col-lg-4 col-xl-3 px-2" key={item.name} >
+                     <div className="col-lg-3 col-sm-12 col-md-6 px-2" key={item.id}>
                         <div className="card menu-card my-2 shadow-none">
                                 <img className="card-img-top" src={item.photo} alt={item.name} />
                                 <div className="card-body">
