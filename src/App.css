@@ -9,6 +9,13 @@ body{
     transition: .8s;
 }
 
+.navigation:hover {
+    color: #ffc500 !important;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+
 .marginHome{
     margin-top: -2rem;
 }
@@ -36,6 +43,13 @@ h3 {
 .btn {
     box-shadow: none;
     border-radius: 100px;
+}
+
+.btn:hover {
+    background: #ffc500 !important;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    color: #000;
 }
 
 .orderBtn{
@@ -96,7 +110,7 @@ h3 {
 
 #customer-favorites,
 #menu {
-    min-height: 1040px;
+    min-height: 800px;
     background-color: #D72323;
     clip-path: polygon(
             0 0,
@@ -120,7 +134,7 @@ footer {
 }
 
 .menu-card {
-    min-height: 36em;
+    min-height: 28em;
 }
 
 #menu-loader {
@@ -211,4 +225,98 @@ footer {
 
 .test{
     margin: auto;
+}
+
+.productsContainer {
+    min-height: 100vh;
+    background: transparent;
+    color: #fff;
+}
+
+.productWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.productCard {
+    margin: 1rem 2rem;
+    line-height: 2;
+    width: 300px;
+    background: white;
+
+}
+
+.productImg {
+    padding-top: 10px;
+    height: 200px;
+    min-width: 200px;
+    max-width: 85%;
+}
+
+.productsHeading {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    text-align: center;
+    margin: 3rem;
+
+}
+
+.productTitle {
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: black;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    color: black;
+
+}
+
+.productDescription {
+    margin-bottom: 1rem;
+}
+
+.productPrice {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.productButton {
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    border: none;
+    background: #e31837;
+    color: #fff;
+    transition: 0.2s ease-out;
+}
+.productButton:hover {
+     background: #ffc500;
+     transition: 0.2s ease-out;
+     cursor: pointer;
+     color: #000;
+}
+
+.nav-cart{
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+.nav-cart span{
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    background-color: #e31837;
+    font-size: 10px;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 50%;
+    z-index: -1;
 }

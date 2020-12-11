@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { removeItem,addQuantity,subtractQuantity} from '../actions/cartActions'
 import Recipe from './Recipe'
-import { ToastContainer, toast } from 'react-toastify';
 
 class Cart extends Component{
 
@@ -24,7 +23,6 @@ class Cart extends Component{
         let addedItems = this.props.items.length ?
             (
              <div className="row desserts-grid">{this.props.items.map(item=>{
-                 const notify = () => toast.error(`${item.name} Removed`);
                  return(
                      <div className="col-lg-3 col-sm-12 col-md-6 px-2" key={item.id}>
                         <div className="card menu-card my-2 shadow-none">
@@ -34,7 +32,7 @@ class Cart extends Component{
                                 </div>
                                 <div className="card-content">
                                     <p>
-                                        <b>Price:£ {item.price}</b>
+                                        <b>Price: £{item.price}</b>
                                     </p>
                                 </div>
                                 <p>
@@ -44,8 +42,7 @@ class Cart extends Component{
                                 <Link to="cart"><i className="fa fa-plus fa-2x fa-cog" aria-hidden="true" onClick={()=>{this.handleAddQuantity(item.id)}}/></Link>
                                 <Link to="cart"><i className="fa fa-minus fa-2x fa-cog" onClick={()=>{this.handleSubtractQuantity(item.id)}}/></Link>
                             </div>
-                            <button className="btn-CTA btn active orderBtn" onClick={()=>{this.handleRemove(item.id);notify()}}>Remove</button>
-                            <ToastContainer/>
+                            <button className="btn-CTA btn active orderBtn" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
                         </div>
                         </div>
                     )
@@ -62,8 +59,8 @@ class Cart extends Component{
                 <div className="row favorite-grid">
                     <div className="container text-center">
                     <h1 className="text-white my-5 font-weight-bold">Your Order</h1>
-                        <Recipe/>
                         {addedItems}
+                        <Recipe/>
                     </div>
                 </div>
             </section>
