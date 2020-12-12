@@ -1,8 +1,6 @@
 import React from 'react';
-
 import {addToCart} from "../../actions/cartActions";
 import {connect} from "react-redux";
-import {toast, ToastContainer} from 'react-toastify';
 
 class Drinks extends React.Component {
 
@@ -12,7 +10,6 @@ class Drinks extends React.Component {
 
     render() {
         let itemList = this.props.items.filter(x=> x.category ==="drink").map(item=> {
-            const notify = () => toast.success(`${item.name} Added`);
             return(
                 <div className="productWrapper">
                     <div className="productCard">
@@ -24,9 +21,7 @@ class Drinks extends React.Component {
                             <p className="productPrice">£ {item.price}</p>
                             <button className="productButton" onClick={() => {
                                 this.handleClick(item.id);
-                                notify()
                             }}>Add <i className="fa fa-shopping-cart"/></button>
-                            <ToastContainer/>
                         </div>
                     </div>
                 </div>

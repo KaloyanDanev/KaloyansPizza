@@ -1,5 +1,4 @@
 import React from 'react';
-import {toast} from 'react-toastify';
 
 import {addToCart} from "../../actions/cartActions";
 import {connect} from "react-redux";
